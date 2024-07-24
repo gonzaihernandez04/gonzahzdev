@@ -1,0 +1,141 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+.contenido{
+    width: 90%;
+}
+body{background-color: rgb(248, 248, 248);
+    padding: 2rem 0;
+    margin: 0;
+    &.darkmode{
+        background-color: darken(v.$negro,4%);
+        .header{
+            &__nombre h1{
+                color: v.$blanco;
+            }
+            &__profesion h3{
+                color: darken(v.$blanco,20%);
+            }
+            &__localidad h4{
+                color: darken(v.$blanco,20%);
+            }
+        }
+
+        .navegacion{
+            background-color: darken(v.$negro,5%),;
+            box-shadow: none;
+            &__enlaces a{
+                color: darken(v.$blanco,5%);
+            }
+            &__dark p{
+                color: v.$blanco;
+            }
+        }
+
+        .secciones{
+            &__enlaces a{
+
+                color: v.$blanco;
+          
+            }
+        }
+
+        .seccion{
+            &__titulo h2,h3{
+                color: v.$blanco;
+            }
+            &__texto p{
+                color: darken(v.$blanco,25%);
+            }
+            &__row{
+                &-subdata{
+                    color: darken(v.$blanco,15%);
+                }
+            }
+            &__card{
+                background-color: v.$negro;
+            }
+        }
+
+
+        .swiper-button-next, .swiper-button-prev{
+            color: v.$blanco !important;
+        }
+    }
+}
+
+*::after,*::before{
+    margin: 0;
+    padding: 0;
+}
+h1,h2,h3,h4,h5,h6,p,a,label,span,ul,input,textarea,button,small{
+    font-family: v.$fuente;
+ 
+}
+.container{
+        @include m.contenedor-sm;
+
+    @include m.tablet{
+        @include m.contenedor-md;
+
+    }
+    @include m.desktop{
+        @include m.contenedor-lg
+    }
+    @include m.desktopXL{
+       @include m.contenedor-lg;
+        
+    }
+
+    @include m.desktop2XL{
+        @include m.contenedor-xl;
+         
+     }
+}
+
+.separador{
+    display: block;
+    border: .2px solid lighten(v.$negro,50%);
+    width: 80%;
+    
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+
+.swiper-button-next, .swiper-button-prev{
+    color: black  !important;
+    max-width: 30px;
+
+}
+.swiper{
+    width: 90% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.swiper-slide{
+    width: fit-content !important;
+    margin-right: 3rem !important;
+}
+.swiper2{
+    overflow-x: hidden !important;
+    cursor:grab;
+}
+.block{
+    display: inline-block;
+}
+.shake{
+    animation: shake 2s linear infinite;
+}
+
+
+
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+  25% { transform: rotate(10deg); }
+  50% { transform: rotate(0eg); }
+  75% { transform: rotate(-10deg); }
+  100% { transform: rotate(0deg); }
+}

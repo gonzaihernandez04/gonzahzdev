@@ -1,0 +1,112 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.seccion {
+    overflow-y: scroll;
+
+    max-height: 1000px;
+    @include m.tablet{
+        max-height: 700px;
+    }
+    @include m.desktopXL{
+        max-height: 1000px;
+    }
+
+    &__titulo {
+        font-size: 1.4rem;
+        color: v.$negro;
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+
+        &-subdata {
+            color: lighten(v.$negro, 25%);
+            font-weight: 600;
+        }
+
+    }
+
+    &__texto {
+        text-align: justify;
+        width: 90%;
+        &--proyectos{
+            text-align: left;
+        }
+        h3 {
+            margin-top: 1.7rem;
+            font-size: 1.4rem;
+            margin-bottom: 0;
+        }
+
+       
+    }
+
+    &-titulos {
+        overflow-y: hidden;
+        max-height: 90%;
+    }
+
+    &__card {
+        margin-top: 5rem;
+        background-color: darken(v.$blanco, 2%);
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &--proyectos {
+            background-color: darken(v.$blanco, 5%);
+            border-radius: 20px;
+            transition: transform .2s ease;
+            cursor: pointer;
+            &:hover{
+                transform: scale(1.025);
+            }
+        }
+
+        &-img {
+            width: 400px;
+
+            &--proyectos {
+                max-height: 200px;
+
+                img {
+                    border-top-left-radius: 20px;
+                    border-top-right-radius: 20px;
+                }
+
+            }
+
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &__grid {
+        padding-inline: 5rem;
+    }
+
+    &__parrafo{
+        line-height: 2rem;
+        height: 200px;
+        overflow: hidden;
+        transition: height .4s ease;
+        &--expandido{
+            height: 500px;
+        }
+    }
+
+    &__guia{
+        padding-block: 2rem;
+        color: darken(v.$blanco,70% );
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}

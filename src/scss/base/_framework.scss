@@ -1,0 +1,41 @@
+.flex{
+    display: flex;
+}
+.row{
+    flex-direction: row;
+}
+.column{
+    flex-direction: column;
+}
+
+.grid{
+    display: grid;
+}
+
+
+
+$i: 0;
+@for $i from 0 to 20{
+    .gap-#{$i}{
+        gap: #{$i}rem;
+    }
+    .py-#{$i}{
+        padding-block: #{$i}rem;
+    }
+    .px-#{$i}{
+        padding-inline: #{$i}rem;
+    }
+    .my-#{$i}{
+        margin-block: #{$i}rem;
+    }
+    .mx-#{$i}{
+        margin-inline: #{$i}rem;
+    }
+    .lh-#{$i}{
+        line-height: #{$i}rem;
+    }
+    .grid-cols-#{$i}{
+        grid-template-columns: repeat(#{$i},1fr);
+    }
+    
+}

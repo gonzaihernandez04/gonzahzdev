@@ -1,0 +1,20 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+.secciones{
+    padding: 3rem 0;
+    &__enlaces a{
+
+        @include m.enlace(v.$negro,1rem,0px,transparent,transparent);
+        margin-right: 3rem;
+  
+    }
+    &__enlaces{
+        padding: 0 5rem;
+
+    }
+    
+    &__enlaces a:last-child{
+        margin: 0;
+    }
+   
+}

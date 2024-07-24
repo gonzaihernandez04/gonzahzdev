@@ -1,0 +1,2 @@
+window.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll(".seccion__guia").forEach(e=>{e.addEventListener("click",()=>{!function(e){const n=e.parentElement.querySelector(".seccion__parrafo");n&&(n.classList.contains("seccion__parrafo--expandido")?(n.classList.remove("seccion__parrafo--expandido"),e.textContent="Seguir Leyendo"):(n.classList.add("seccion__parrafo--expandido"),e.textContent="Ver menos"))}(e)})})});
+//# sourceMappingURL=expandir.js.map

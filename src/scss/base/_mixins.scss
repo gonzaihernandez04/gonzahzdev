@@ -1,0 +1,65 @@
+@use 'variables' as v;
+
+@mixin boxShadow{
+    -webkit-box-shadow: 0px 0px 7px 3px #E1E1E1; 
+    box-shadow: 0px 0px 7px 3px #E1E1E1;
+}
+
+@mixin contenedor-sm{
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+@mixin contenedor-md{
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+@mixin contenedor-lg{
+    max-width: 80%;
+    margin: 0 auto;
+}
+@mixin contenedor-xl{
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+
+@mixin tablet{
+    @media(min-width: v.$tablet){
+        @content;
+    }
+}
+
+
+@mixin desktop{
+    @media(min-width: 1024px){
+        @content;
+    }
+}
+
+@mixin desktopXL{
+    @media(min-width: v.$desktopXL){
+        @content;
+    }
+}
+
+@mixin desktop2XL{
+    @media(min-width: v.$desktop2XL){
+        @content;
+    }
+}
+
+@mixin ajustarTexto($min,$max){
+    font-size: clamp($min, -0.8rem + 10vw, $max);
+}
+
+
+@mixin enlace($color,$fontSize,$borderSize,$borderColor,$bgColor){
+    text-decoration: none;
+    color: $color;
+    font-size: $fontSize;
+    background-color: $bgColor;
+    border: $borderSize solid $borderColor;
+}
+

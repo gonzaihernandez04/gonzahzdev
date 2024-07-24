@@ -1,0 +1,7 @@
+node_modules
+package.json
+gulpfile.js
+teoria.txt
+composer.json
+composer.lock
+package-lock.json
