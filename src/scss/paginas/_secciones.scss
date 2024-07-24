@@ -2,7 +2,7 @@
 @use 'base/mixins' as m;
 
 .seccion {
-    overflow-y: scroll;
+    
 
     max-height: 1000px;
     @include m.tablet{
@@ -94,12 +94,16 @@
 
     &__parrafo{
         line-height: 2rem;
-        height: 200px;
+        margin-bottom: 3rem;
         overflow: hidden;
         transition: height .4s ease;
+        &--proyectos{
+            height: 200px;
+        }
         &--expandido{
             height: 500px;
         }
+      
     }
 
     &__guia{
@@ -111,24 +115,10 @@
     }
 
     &.tecnologias{
-        max-width: 1200px;
-        margin: 0 auto;
+       max-width: 100%;
 
     }
-
-    &__slide{
-    
   
-  
-        margin-block: 2rem;
-            img{
-                height: 128px;
-                margin-right: 8rem;
-                width: 128px;
-              
-            }
-        
-    }
 
 
 }

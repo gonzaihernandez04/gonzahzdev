@@ -1,0 +1,25 @@
+
+@use 'base/variables' as v;
+.slides-container{
+        overflow: hidden;
+    &__slide{
+       display: flex;
+       white-space: wrap;
+        margin-block: 3rem;
+        &-img{
+            position: relative;
+            padding: 2.5rem;
+            height: 80px;
+            width: 80px;
+            margin-right: 3rem;
+            background-color: v.$blanco;
+            border-radius: 50%;
+        }
+
+    }
+
+  
+    
+}
+
+

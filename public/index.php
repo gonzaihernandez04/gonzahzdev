@@ -3,6 +3,7 @@
 require __DIR__ . '/../includes/app.php';
 
 use Controllers\ApiTecnologiasController;
+use Controllers\DocenciaController;
 use MVC\Router;
 use Controllers\IndexController;
 use Controllers\TitulosController;
@@ -28,6 +29,10 @@ $router->get('/proyectos',[ProyectosController::class,"index"]);
 $router->get('/tecnologias',[TecnologiasController::class,"index"]);
 
 
+//Docencia. No creo controlador ya que solo es para mostrar contenido
+$router->get('/docencia',[DocenciaController::class,"index"]);
+
+$router->get('/docencia/opiniones',[DocenciaController::class,"opiniones"]);
 
 
 

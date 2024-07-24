@@ -11,7 +11,7 @@ class EstudiosController{
         $estudios = $controller->devolverEstudiosTitulo();
        
         $router->render("estudios/index",[
-            "titulo"=>"Estudios",
+            "titulo"=>"Estudios 📚",
             "estudios"=>$estudios
         ]);
     }

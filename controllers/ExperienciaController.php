@@ -9,7 +9,7 @@ class ExperienciaController{
         $experiencias = Experiencia::allXCol("DESC","fechaInicio");
         
         $router->render('experiencia/index',[
-            'titulo'=>"Experiencia",
+            'titulo'=>"Experiencia ⚡",
             'experiencias' =>$experiencias ?? []
         ]);
     }

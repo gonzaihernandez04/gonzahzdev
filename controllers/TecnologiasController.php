@@ -9,7 +9,7 @@ class TecnologiasController{
     public static function index(Router $router){
        
         $router->render("tecnologias/index",[
-            "titulo" => "Tecnologias",
+            "titulo" => "Tecnologias 🚀",
         ]);
     }
 }

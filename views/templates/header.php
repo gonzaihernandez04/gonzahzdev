@@ -5,8 +5,8 @@
 <div class="header__container">
 <div class="header__foto">
     <picture>
-       <source srcset="build/img/fotopersonal.webp" type="image/webp">
-       <img src="build/img/fotopersonal.jpg" alt="Imagen personal" loading="lazy">
+       <source srcset="/build/img/fotopersonal.webp" type="image/webp">
+       <img src="/build/img/fotopersonal.jpg" alt="Imagen personal" loading="lazy">
     </picture>
 </div>
 

@@ -9,7 +9,7 @@ class IndexController{
         
 
         $router->render('index/index',[
-            'titulo'=>"Inicio"
+            'titulo'=>"Sobre mi 👨🏻‍💻🎸"
         ]);
     }
 

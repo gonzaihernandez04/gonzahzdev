@@ -1,5 +1,3 @@
-const { getSlideTransformEl } = require("swiper/effect-utils");
-
 window.addEventListener("DOMContentLoaded", () => {
   apiTech();
 });
@@ -12,27 +10,45 @@ async function apiTech() {
 }
 
 function imprimirTecnologias(tecnologias) {
-  const contenedor = document.querySelector(".tecnologias");
-  const slideContainer = document.createElement("DIV");
-  slideContainer.classList.add("slides-container");
-  contenedor.appendChild(slideContainer);
+  const slideContainer = document.querySelector('.slides-container')
 
   // Crea un map, que es un diccionario. Me permitira hacer complejidad O(n), evitando O(n^2)
   const slidesMap = new Map();
+    mostrarTech(slidesMap,tecnologias,slideContainer)
+ 
 
-  tecnologias.forEach((tecnologia) => {
-    const tipo = tecnologia.tipoLenguaje;
 
-    if (!slidesMap.has(tipo)) {
-      const slide = document.createElement("DIV");
-      slide.classList.add("slides__slide");
-      slidesMap.set(tipo, slide);
-      slideContainer.appendChild(slide);
+
+  
+}
+function mostrarTech(slidesMap, tecnologias, slideContainer) {
+    let index = 0;
+
+    while (index < tecnologias.length) {
+        const tecnologia = tecnologias[index];
+            const tipo = tecnologia.tipoLenguaje;
+
+            if (!slidesMap.has(tipo)) {
+                headingTipo = document.createElement("H3");
+               headingTipo.textContent = tipo;
+               headingTipo.classList.add('seccion__texto');
+                const slide = document.createElement("DIV");
+                slide.classList.add("slides-container__slide");
+                slideContainer.appendChild(headingTipo)
+                slidesMap.set(tipo, slide);
+                slideContainer.appendChild(slide);
+            }
+
+            const slide = slidesMap.get(tipo);
+
+
+            slide.setAttribute("data-tipo", tecnologia.tipoLenguaje);
+            const slideImg = `
+                <img src="build/img/tecnologias/${tecnologia.imagen}.svg" loading="lazy" class="slides-container__slide-img" alt="${tecnologia.descripcion}" />
+            `;
+            slide.innerHTML += slideImg;
+        
+
+        index++;
     }
-    const slide = slidesMap.get(tipo);
-    const slideImg = `
-    <img src="build/img/tecnologias/${tecnologia.nombre}.svg" alt="${tecnologia.descripcion}" />
-`;
-    slide.innerHTML += slideImg;
-  });
 }

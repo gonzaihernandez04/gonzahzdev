@@ -22,7 +22,7 @@
                     $parrafos = partirParrafo(sanitizar($proyecto->descripcion));
                     ?>
 
-                    <div class="seccion__parrafo">
+                    <div class="seccion__parrafo seccion__parrafo--proyectos">
                         <?php foreach ($parrafos as $key => $parrafo) : ?>
                             <p><?php echo $parrafos[$key] ?></p>
                         <?php endforeach; ?>

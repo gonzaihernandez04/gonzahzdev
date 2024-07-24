@@ -9,7 +9,7 @@ class TitulosController{
         $titulos = Titulo::all("ASC");
        
         $router->render("titulos/index",[
-            "titulo" => "Titulos y certificaciones",
+            "titulo" => "Titulos y certificaciones 📑",
             "titulos" => $titulos
         ]);
 

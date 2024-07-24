@@ -1,7 +1,5 @@
-<section class="seccion container seccion-titulos">
-    <div class="seccion__titulo">
-        <h2>Titulos y certificaciones 📑</h2>
-    </div>
+<?php include_once __DIR__ . '/../templates/seccion_container.php';?>
+
     
     <div class="swiper2 mySwiper">
     <div class="swiper-wrapper">

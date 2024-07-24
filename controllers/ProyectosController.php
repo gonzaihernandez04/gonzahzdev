@@ -12,7 +12,7 @@ class ProyectosController{
         $proyectos = Proyecto::all("ASC");
         
         $router->render("proyectos/index",[
-            "titulo"=>'Proyectos',
+            "titulo"=>'Proyectos ⌨️',
             "proyectos" => $proyectos
         ]);
     }
