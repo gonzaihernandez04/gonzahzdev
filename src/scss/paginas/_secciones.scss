@@ -109,4 +109,26 @@
             cursor: pointer;
         }
     }
+
+    &.tecnologias{
+        max-width: 1200px;
+        margin: 0 auto;
+
+    }
+
+    &__slide{
+    
+  
+  
+        margin-block: 2rem;
+            img{
+                height: 128px;
+                margin-right: 8rem;
+                width: 128px;
+              
+            }
+        
+    }
+
+
 }
