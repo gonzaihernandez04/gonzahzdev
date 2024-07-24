@@ -5,3 +5,4 @@ teoria.txt
 composer.json
 composer.lock
 package-lock.json
+db.sql
