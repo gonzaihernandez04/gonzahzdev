@@ -8,6 +8,7 @@ use Controllers\TitulosController;
 use Controllers\EstudiosController;
 use Controllers\ProyectosController;
 use Controllers\ExperienciaController;
+use Controllers\TecnologiasController;
 
 $router = new Router();
 

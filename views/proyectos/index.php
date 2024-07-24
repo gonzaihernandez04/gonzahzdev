@@ -1,7 +1,4 @@
-<section class="seccion container">
-    <div class="seccion__titulo">
-        <h2><?php echo sanitizar($titulo); ?> 🧑‍💻</h2>
-    </div>
+<?php include_once __DIR__ . '/../templates/seccion_container.php';?>
 
     <div class="seccion__grid grid grid-cols-3 gap-5 ">
         <?php foreach ($proyectos as $key => $proyecto) : ?>

@@ -1,7 +1,5 @@
-<section class="seccion container">
-    <div class="seccion__titulo">
-        <h2>Sobre mi 👨🏻‍💻</h2>
-    </div>
+<?php include_once __DIR__ . '/../templates/seccion_container.php';?>
+
     <div class="seccion__texto">
   <p class="lh-2">  ¡Hola! Soy Gonzalo Hernández y tengo 21 años. Soy técnico en computación y desarrollador web, cursando la carrera de Ingeniera en Informatica. Hace 2 años incursioné en el mundo del desarrollo web. Actualmente desarrollo paginas web, ya sean Landing pages, SPA's. Sistemas de manera personalizada sin un sistema de plantillas. Mi objetivo es crear soluciones importantes en memoria y tiempo. El uso de distintos tipos de programacion para encontrar una solucion eficiente y un diseño agradable a la vista del usuario es mi marca.</p>
 

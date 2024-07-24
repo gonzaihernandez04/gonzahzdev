@@ -1,7 +1,5 @@
-<section class="seccion container">
-    <div class="seccion__titulo">
-        <h2>Estudios 📚</h2>
-    </div>
+<?php include_once __DIR__ . '/../templates/seccion_container.php';?>
+
     <?php foreach ($estudios as $key => $estudio) : ?>
         <div class="seccion__subtitulo">
             <div class="seccion__row">
