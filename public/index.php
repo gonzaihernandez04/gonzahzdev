@@ -3,6 +3,7 @@
 require __DIR__ . '/../includes/app.php';
 
 use Controllers\ApiTecnologiasController;
+use Controllers\ApiUniversidadesController;
 use Controllers\DocenciaController;
 use MVC\Router;
 use Controllers\IndexController;
@@ -35,11 +36,17 @@ $router->get('/docencia',[DocenciaController::class,"index"]);
 $router->get('/docencia/opiniones',[DocenciaController::class,"opiniones"]);
 
 
+$router->get('/docencia/opiniones/crear',[DocenciaController::class,"crear"]);
+$router->post('/docencia/opiniones/crear',[DocenciaController::class,"crear"]);
+
 
 //API
 
 
 $router->get('/api/tecnologias',[ApiTecnologiasController::class,"getTech"]);
+
+$router->get('/api/universidades',[ApiUniversidadesController::class,"getUniversity"]);
+
 
 // Comprueba y valida las rutas, que existan y les asigna las funciones del Controlador
 $router->comprobarRutas();

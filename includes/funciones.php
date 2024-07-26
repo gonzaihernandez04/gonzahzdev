@@ -32,3 +32,46 @@ function partirParrafo($texto) : array{
 function sanitizar($variable) :string{
     return htmlspecialchars($variable);
 }
+
+
+
+// Encuentra una universidad
+function findUniversity($query) {
+    
+    // if(!str_contains(strtolower($query),"universidad")){
+    //     $newQuery = "Universidad " . $query;
+    // }else{
+        $newQuery = $query;
+    //}
+  
+
+    $url = "https://nominatim.openstreetmap.org/search?q=" . urlencode($newQuery) . "&format=jsonv2";
+    // Iniciar cURL
+    $ch = curl_init();
+
+    // Establecer opciones de cURL
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 10); // Tiempo de espera de 10 segundos
+
+
+
+    curl_setopt($ch, CURLOPT_USERAGENT, 'gonzahzportfolio (gonzahernandezdev@gmail.com - localhost)');
+
+    // Ejecutar la solicitud y obtener la respuesta
+    $response = curl_exec($ch);
+
+    // Verificar si hubo errores
+    if (!$response) {
+        $error = curl_error($ch);
+        curl_close($ch);
+        return ["error" => "No se puede conectar a la API: " . $error];
+    }
+
+    // Cerrar la sesión cURL
+    curl_close($ch);
+    // Decodificar la respuesta JSON
+    $data = json_decode($response, true);
+    return json_encode($data);
+  
+}
