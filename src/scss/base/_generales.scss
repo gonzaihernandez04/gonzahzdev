@@ -149,6 +149,25 @@ img{
     animation: shake 2s linear infinite;
 }
 
+.mostrar{
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+.ocultar{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.btn-cerrar{
+    font-weight: 600;
+    color: darken(v.$azul,10%);
+    transition: color .2s ease;
+    &:hover{
+        cursor: pointer;
+        color: darken(v.$azul,30%);
+    }
+
+}
 
 
 @keyframes shake {

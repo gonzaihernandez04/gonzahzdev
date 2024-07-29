@@ -1,0 +1,105 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+.formulario{
+    position: relative;
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    place-content: center;
+    gap: 1rem;
+    input{
+        margin-bottom: 1.5rem;
+    }
+
+    &__busqueda{
+
+        position: relative;
+        display: flex;
+        flex-direction: column;
+            width: 100%;
+            grid-column: 1/2;
+        }
+
+        &__button{
+            &--buscar{
+                width: fit-content;
+            }
+        
+    }
+    &__aclaracion-container{
+        position: relative;
+    }
+    &__aclaracion{
+        position: absolute;
+        width: fit-content;
+        background-color: lighten(v.$blanco,5%);
+        border-radius: 50%;
+        padding: .5rem;
+        font-weight: 700;
+        right: 15%;
+        top: 1%;
+        &:hover{
+            cursor: pointer;
+        }
+      
+    }
+
+  &__opciones{
+    background-color: darken(v.$blanco, 2%);
+    padding-block: .5rem;
+  }
+
+    &__opcion{
+        padding: .5rem;
+        margin-top: .4rem;
+        background-color: darken(v.$blanco,5%);
+        transition: .3s background ease-in-out;
+        &:hover{
+            cursor: pointer;
+            background-color: v.$blanco;
+        }
+
+    }
+    &__modal{
+        opacity: 0;
+        transition: all .2s ease-in-out;
+        visibility: hidden;
+        position: absolute;
+        @include m.boxShadow();
+        background-color: white;
+        z-index: 100;
+        width: 0%;
+        height: 150px;
+        &.mostrar{
+            width: 70%;
+        }
+    }
+   
+    }
+
+
+label{
+    display: block;
+    margin-block: 1.5rem;
+
+}
+input[type="text"], input[type="email"]{
+    
+    width: 80%;
+    padding-block: .9rem;
+    padding-inline-start: .5rem;
+border: .2px solid;
+    border-color: lighten(v.$negro,80%);
+    outline: none;
+
+}
+
+input[type="radio"]{
+    width: 18px;
+    height: 18px;
+    &:checked{
+        accent-color: v.$azul;
+        border-color: white;
+    }
+    
+}

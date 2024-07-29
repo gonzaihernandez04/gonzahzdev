@@ -1,0 +1,2 @@
+window.addEventListener("DOMContentLoaded",()=>{const e=document.querySelector(".formulario__aclaracion"),t=document.querySelector(".formulario__modal"),o=document.querySelector(".btn-cerrar");if(!e)return;const r=e.getAttribute("aria-hidden");function c(){t.children[1].remove(),e.classList.remove("ocultar"),t.classList.remove("mostrar")}e.onclick=()=>{e.classList.add("ocultar"),function(e){t.classList.add("mostrar");const o=document.createElement("P");o.textContent=e,t.appendChild(o)}(r)},t.onclick=()=>{c()},o.onclick=()=>{c()}});
+//# sourceMappingURL=aclaracion.js.map

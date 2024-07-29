@@ -1,7 +1,7 @@
 window.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector(".formulario");
   const inputUniversidad = document.querySelector("input[name='universidad']");
-  const buttonSearch = document.querySelector(".formulario__buton--buscar");
+  const buttonSearch = document.querySelector(".formulario__button--buscar");
   const cardOpciones = document.querySelector('.formulario__opciones');
   buttonSearch.addEventListener("click", (e) => {
     findUniversity(e);
@@ -30,8 +30,11 @@ Asegura la Integridad de los Datos: Evita que los caracteres especiales interfie
           }
         );
 
-    
         const data = await response.json();
+
+        if(data == []){
+          generarAlerta("error");
+        }
 
         const universidades = [];
 
@@ -54,14 +57,15 @@ Asegura la Integridad de los Datos: Evita que los caracteres especiales interfie
 
   function generarCard(universidades){
     limpiarHTML();
-    universidades.forEach(universidad=>{
+    universidades.forEach((universidad,i)=>{
         const opcion = document.createElement('div');
         opcion.classList.add('formulario__opcion');
-        opcion.innerHTML = `<p class="formulario__opcion-nombre">${universidad}</p>`;
+        opcion.innerHTML = `<p class="formulario__opcion-nombre">${i}. ${universidad}</p>`;
         cardOpciones.appendChild(opcion);
         opcion.addEventListener('click',()=>{
             
             inputUniversidad.value = opcion.children[0].textContent;
+            limpiarHTML();
         })
     })
 
@@ -71,5 +75,15 @@ Asegura la Integridad de los Datos: Evita que los caracteres especiales interfie
     while(cardOpciones.firstChild){
         cardOpciones.removeChild(cardOpciones.firstChild);
     }
+  }
+
+  function generarAlerta(tipo){
+    const alerta = document.createElement('DIV');
+    alerta.classList.add(`alerta ${tipo}`);
+    const mensaje = document.createElement('P');
+    mensaje.textContent = "No existe la universidad señalada";
+    alerta.appendChild(mensaje);
+
+    form.appendChild(alerta);
   }
 });
