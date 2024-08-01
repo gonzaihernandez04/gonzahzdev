@@ -30,7 +30,7 @@ function partirParrafo($texto) : array{
 }
 
 function sanitizar($variable) :string{
-    return htmlspecialchars($variable);
+    return htmlspecialchars($variable,ENT_QUOTES, 'UTF-8');
 }
 
 

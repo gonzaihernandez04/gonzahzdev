@@ -1,14 +1,19 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 .formulario{
+   &__container{
     position: relative;
     margin-top: 4rem;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     place-content: center;
     gap: 1rem;
-    input{
+   }
+    input[type="text"],input[type="email"]{
         margin-bottom: 1.5rem;
+    }
+    &__input{
+        position: relative;
     }
 
     &__busqueda{
@@ -26,9 +31,7 @@
             }
         
     }
-    &__aclaracion-container{
-        position: relative;
-    }
+
     &__aclaracion{
         position: absolute;
         width: fit-content;
@@ -36,8 +39,8 @@
         border-radius: 50%;
         padding: .5rem;
         font-weight: 700;
-        right: 15%;
-        top: 1%;
+        right: 20%;
+        top: -15%;
         &:hover{
             cursor: pointer;
         }
@@ -47,11 +50,12 @@
   &__opciones{
     background-color: darken(v.$blanco, 2%);
     padding-block: .5rem;
+    margin-top: 1rem;
+
   }
 
     &__opcion{
         padding: .5rem;
-        margin-top: .4rem;
         background-color: darken(v.$blanco,5%);
         transition: .3s background ease-in-out;
         &:hover{
@@ -74,6 +78,62 @@
             width: 70%;
         }
     }
+
+    &__textarea{
+        textarea{
+            resize: none;
+            height: 100px;
+        }
+    }
+
+    
+    &__boton{
+        all: unset;
+        margin-top: 3rem;
+        padding: 1rem;
+        @include m.ajustarTexto(1rem,.8rem);
+        background-color: v.$blanco;
+        color: v.$negro;
+        width: fit-content;
+        font-weight: 600;
+    }
+
+    &__recomendacion{
+        &-container{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0;
+        }
+       
+
+        /* ESTRELLAS */
+        .stars{
+            display: flex;
+
+            /* Al hacer hover permite que cambie la direccion del orden  de las estrellas. En vez de derecha a izquierda a derecha a izquierda*/
+            direction: rtl;/* right to left */
+            unicode-bidi: bidi-override;
+           
+            gap: 3rem;
+            input[type = "radio"]{ display:none;}
+            input[type="radio"]:checked ~ label{
+                color: v.$naranja;
+
+            }
+            label{
+               transform: scale(1.5);
+            }
+            label:hover ~ label{color:v.$naranja;}
+            label:hover{
+                color: v.$naranja;
+                cursor: pointer;
+
+                animation: rotate 1s linear;
+            }
+
+        }
+    }
    
     }
 
@@ -83,23 +143,18 @@ label{
     margin-block: 1.5rem;
 
 }
-input[type="text"], input[type="email"]{
+
+
+/*INPUTS TEXT EMAIL STYLES*/
+input[type="text"], input[type="email"],textarea{
     
     width: 80%;
-    padding-block: .9rem;
+    padding-block: 1rem;
     padding-inline-start: .5rem;
+    @include m.ajustarTexto(.9rem,1rem);
 border: .2px solid;
     border-color: lighten(v.$negro,80%);
     outline: none;
 
 }
 
-input[type="radio"]{
-    width: 18px;
-    height: 18px;
-    &:checked{
-        accent-color: v.$azul;
-        border-color: white;
-    }
-    
-}

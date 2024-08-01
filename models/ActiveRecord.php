@@ -78,6 +78,16 @@ class ActiveRecord {
         return array_shift( $resultado ) ;
     }
 
+    public static function getId($columna, $valor) {
+        $query = "SELECT id FROM " . static::$tabla . " WHERE ". $columna . " = '" . $valor . "' ;";
+      
+
+        $resultado = self::consultarSQL($query);
+        
+        return array_shift( $resultado )->id ;
+    }
+    
+
 
     // Retornar los registros por un orden
     public static function ordenar($columna,$orden){

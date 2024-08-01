@@ -1,3 +1,4 @@
+@use 'base/variables' as v;
 .flex{
     display: flex;
 }
@@ -6,6 +7,9 @@
 }
 .column{
     flex-direction: column;
+}
+.align-center{
+    align-items: center;
 }
 
 .grid{
@@ -17,6 +21,9 @@
 }
 .text-right{
     text-align: right;
+}
+.text-white{
+    color: v.$blanco;
 }
 .w-100{
     width: 100%;
@@ -56,5 +63,8 @@ $i: 0;
     
     .pl-#{$i}{
         padding-left: #{$i}rem;
+    }
+    .m-#{$i}{
+        margin: #{$i}rem ;
     }
 }

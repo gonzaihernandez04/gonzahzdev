@@ -4,6 +4,8 @@
 
     <?php include_once __DIR__ .'/../utils/formulario.php';?>
 
+    <input type="submit" value="Enviar opinion" class="formulario__boton">
+
 </form>
 
 
