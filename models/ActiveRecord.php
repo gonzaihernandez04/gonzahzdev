@@ -43,7 +43,6 @@ class ActiveRecord {
 
     public static function all($order = 'DESC') {
         $query = "SELECT * FROM " . static::$tabla . " ORDER BY id {$order};";
-       
         $resultado = self::consultarSQL($query);
         return $resultado;
     }
@@ -226,17 +225,16 @@ class ActiveRecord {
 
         // Consultar la base de datos
         $resultado = self::$db->query($query);
-   
         // Iterar los resultados
         $array = [];
         while($registro = $resultado->fetch_assoc()) {
-           
+
             $array[] = static::crearObjeto($registro);
         }     
 
         // liberar la memoria
         $resultado->free();
-   
+
 
         // retornar los resultados
         return $array;
@@ -250,6 +248,7 @@ class ActiveRecord {
                 $objeto->$key = $value;
             }
         }
+
 
         return $objeto;
     }

@@ -112,8 +112,7 @@
             display: flex;
 
             /* Al hacer hover permite que cambie la direccion del orden  de las estrellas. En vez de derecha a izquierda a derecha a izquierda*/
-            direction: rtl;/* right to left */
-            unicode-bidi: bidi-override;
+        
            
             gap: 3rem;
             input[type = "radio"]{ display:none;}

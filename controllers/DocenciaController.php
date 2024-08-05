@@ -21,8 +21,28 @@ class DocenciaController
 
     public static function opiniones(Router $router)
     {
+        $opiniones = Opinion::all("ASC");
+        $personas_assoc = [];
+        $personas = Persona::all("ASC");
+        foreach ($personas as $persona) {
+            # code...
+            $personas_assoc[$persona->id] = [
+                'nombre'=> $persona->nombre,
+                'apellido'=>$persona->apellido,
+                'email'=>$persona->email
+            ];
+        }
+
+
+        foreach($opiniones as $opinion){
+            $opinion->persona = $personas_assoc[$opinion->idPersona];
+        }
+
+
+
         $router->render("docencia/opiniones", [
-            "titulo" => "Opiniones 👨🏻‍🏫"
+            "titulo" => "Opiniones 👨🏻‍🏫",
+            "opiniones" => $opiniones
         ]);
     }
 
