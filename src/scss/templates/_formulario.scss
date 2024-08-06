@@ -1,70 +1,77 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
-.formulario{
-   &__container{
-    position: relative;
-    margin-top: 4rem;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    place-content: center;
-    gap: 1rem;
-   }
-    input[type="text"],input[type="email"]{
+
+.formulario {
+    &__container {
+        position: relative;
+        margin-top: 4rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-content: center;
+        gap: 1rem;
+    }
+
+    input[type="text"],
+    input[type="email"] {
         margin-bottom: 1.5rem;
     }
-    &__input{
+
+    &__input {
         position: relative;
     }
 
-    &__busqueda{
+    &__busqueda {
 
         position: relative;
         display: flex;
         flex-direction: column;
-            width: 100%;
-            grid-column: 1/2;
-        }
-
-        &__button{
-            &--buscar{
-                width: fit-content;
-            }
-        
+        width: 100%;
+        grid-column: 1/2;
     }
 
-    &__aclaracion{
+    &__button {
+        &--buscar {
+            width: fit-content;
+        }
+
+    }
+
+    &__aclaracion {
         position: absolute;
         width: fit-content;
-        background-color: lighten(v.$blanco,5%);
+        background-color: lighten(v.$blanco, 5%);
         border-radius: 50%;
         padding: .5rem;
         font-weight: 700;
         right: 20%;
         top: -15%;
-        &:hover{
+
+        &:hover {
             cursor: pointer;
         }
-      
+
     }
 
-  &__opciones{
-    background-color: darken(v.$blanco, 2%);
-    padding-block: .5rem;
-    margin-top: 1rem;
+    &__opciones {
+        background-color: darken(v.$blanco, 2%);
+        padding-block: .5rem;
+        margin-top: 1rem;
 
-  }
+    }
 
-    &__opcion{
+    &__opcion {
         padding: .5rem;
-        background-color: darken(v.$blanco,5%);
+        background-color: darken(v.$blanco, 5%);
         transition: .3s background ease-in-out;
-        &:hover{
+
+        &:hover {
             cursor: pointer;
             background-color: v.$blanco;
         }
 
     }
-    &__modal{
+
+    &__modal {
         opacity: 0;
         transition: all .2s ease-in-out;
         visibility: hidden;
@@ -74,57 +81,68 @@
         z-index: 100;
         width: 0%;
         height: 150px;
-        &.mostrar{
+
+        &.mostrar {
             width: 70%;
         }
     }
 
-    &__textarea{
-        textarea{
+    &__textarea {
+        textarea {
             resize: none;
             height: 100px;
         }
     }
 
-    
-    &__boton{
+
+    &__boton {
         all: unset;
         margin-top: 3rem;
         padding: 1rem;
-        @include m.ajustarTexto(1rem,.8rem);
+        @include m.ajustarTexto(1rem, .8rem);
         background-color: v.$blanco;
         color: v.$negro;
         width: fit-content;
         font-weight: 600;
     }
 
-    &__recomendacion{
-        &-container{
+    &__recomendacion {
+        &-container {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             gap: 0;
         }
-       
+
 
         /* ESTRELLAS */
-        .stars{
+        .stars {
             display: flex;
-
+            direction: rtl;
+            unicode-bidi: bidi-override;
             /* Al hacer hover permite que cambie la direccion del orden  de las estrellas. En vez de derecha a izquierda a derecha a izquierda*/
-        
-           
+
+
             gap: 3rem;
-            input[type = "radio"]{ display:none;}
-            input[type="radio"]:checked ~ label{
+
+            input[type="radio"] {
+                display: none;
+            }
+
+            input[type="radio"]:checked~label {
                 color: v.$naranja;
 
             }
-            label{
-               transform: scale(1.5);
+
+            label {
+                transform: scale(1.5);
             }
-            label:hover ~ label{color:v.$naranja;}
-            label:hover{
+
+            label:hover~label {
+                color: v.$naranja;
+            }
+
+            label:hover {
                 color: v.$naranja;
                 cursor: pointer;
 
@@ -133,11 +151,11 @@
 
         }
     }
-   
-    }
+
+}
 
 
-label{
+label {
     display: block;
     margin-block: 1.5rem;
 
@@ -145,15 +163,16 @@ label{
 
 
 /*INPUTS TEXT EMAIL STYLES*/
-input[type="text"], input[type="email"],textarea{
-    
+input[type="text"],
+input[type="email"],
+textarea {
+
     width: 80%;
     padding-block: 1rem;
     padding-inline-start: .5rem;
-    @include m.ajustarTexto(.9rem,1rem);
-border: .2px solid;
-    border-color: lighten(v.$negro,80%);
+    @include m.ajustarTexto(.9rem, 1rem);
+    border: .2px solid;
+    border-color: lighten(v.$negro, 80%);
     outline: none;
 
 }
-

@@ -26,6 +26,7 @@
 <!-- <?php $script .= "<script src='/build/js/secciones.js'></script>"?> -->
 
 <?php $script .= "<script src = '/build/js/aclaracion.js'></script>";?>
+<?php $script .= "<script src='/build/js/expandir.js'></script>" ?>
 <?php echo $script ?? '';?>
 
 

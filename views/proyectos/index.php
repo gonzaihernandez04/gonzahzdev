@@ -15,14 +15,14 @@
                     </a>
                 </div>
 
-                <div class="seccion__texto seccion__texto--proyectos">
+                <div class="seccion__texto seccion__texto--extender">
                     <h3><?php echo sanitizar($proyecto->nombreProyecto) ?? ''; ?></h3>
 
                     <?php
                     $parrafos = partirParrafo(sanitizar($proyecto->descripcion));
                     ?>
 
-                    <div class="seccion__parrafo seccion__parrafo--proyectos">
+                    <div class="seccion__parrafo seccion__parrafo--extender">
                         <?php foreach ($parrafos as $key => $parrafo) : ?>
                             <p><?php echo $parrafos[$key] ?></p>
                         <?php endforeach; ?>
@@ -36,4 +36,3 @@
     </div>
 </section>
 
-<?php $script = "<script src='build/js/expandir.js'></script>" ?>

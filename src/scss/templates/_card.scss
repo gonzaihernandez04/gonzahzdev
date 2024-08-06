@@ -2,16 +2,30 @@
 @use 'base/variables' as v;
 .cards__grid{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(1,1fr);
     row-gap: 2rem;
+    column-gap: 2rem;
+  
+    @include m.tablet{
+        grid-template-columns: repeat(2,1fr);
+
+    }
+    @include m.desktopXL{
+        grid-template-columns: repeat(3,1fr);
+
+    }
+  
 }
 .card{
+    display: flex;
+    height: fit-content;
     border: 1px solid black;
-    width: fit-content;
+    
     padding-inline: 2.5rem 2rem;
     padding-block: 2rem;
   
-    display: flex;
+    max-width: 75%;
+
     &__head{
         display: flex;
         flex-direction: column;
@@ -21,6 +35,7 @@
         &-nombre{
             display: flex;
             gap: .3rem;
+            margin: 0;
             p{
                 @include m.ajustarTexto(1rem,1.5rem);
                 font-weight: 700;
@@ -31,5 +46,34 @@
         p{
             color: lighten(v.$negro,10%);
         }
+    }
+    &__mensaje{
+    margin-top: 2rem;
+    @include m.ajustarTexto(.9rem,1.1rem);
+    color: lighten(v.$negro,20%);
+    
+    }
+
+}
+
+.card{
+    .stars{
+        display: flex;
+        /* Al hacer hover permite que cambie la direccion del orden  de las estrellas. En vez de derecha a izquierda a derecha a izquierda*/
+        gap: 1rem;
+      
+        label{
+           transform: scale(1.5);
+           &.activado{
+            color: v.$naranja;
+            &:hover{
+                cursor:auto;
+                transition: none;
+                animation: none;
+            }
+           }
+        }
+    
+    
     }
 }

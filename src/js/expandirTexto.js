@@ -1,6 +1,7 @@
 window.addEventListener('DOMContentLoaded',()=>{
     const guias = document.querySelectorAll('.seccion__guia');
 
+    if(!guias) return;
 
 
     guias.forEach(guia => {
@@ -13,6 +14,7 @@ window.addEventListener('DOMContentLoaded',()=>{
     function expandir(guia){
         let containerPadre = guia.parentElement;
        const texto = containerPadre.querySelector('.seccion__parrafo');
+    
        if (texto){
 
         if (texto.classList.contains('seccion__parrafo--expandido')){

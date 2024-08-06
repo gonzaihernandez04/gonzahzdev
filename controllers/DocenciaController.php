@@ -21,7 +21,7 @@ class DocenciaController
 
     public static function opiniones(Router $router)
     {
-        $opiniones = Opinion::all("ASC");
+        $opiniones = Opinion::all("DESC");
         $personas_assoc = [];
         $personas = Persona::all("ASC");
         foreach ($personas as $persona) {
@@ -38,6 +38,7 @@ class DocenciaController
             $opinion->persona = $personas_assoc[$opinion->idPersona];
         }
 
+    
 
 
         $router->render("docencia/opiniones", [

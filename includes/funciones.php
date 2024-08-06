@@ -15,11 +15,11 @@ function isAuth(){
 function partirParrafo($texto) : array{
                         //Hace un SPLIT cuando detecta dos espacios. Divide en parrafos
 
-    $parrafos = preg_split('/\n{2,}/', $texto);
+    $parrafos = preg_split('/\n{1,}/', $texto);
     $arreglo = [];
     // Evito que se guarden caracteres vacios
     foreach ($parrafos as $parrafo) {
-        if($parrafo == ""){
+        if(validarVacioOEspacioVacio($parrafo)){
             continue;
         }
         $arreglo[] = $parrafo;
@@ -27,6 +27,11 @@ function partirParrafo($texto) : array{
 
     return $arreglo;
 
+}
+
+function validarVacioOEspacioVacio($string){
+    $pattern = '/^\s*$/';
+    return preg_match($pattern,$string) == 1;
 }
 
 function sanitizar($variable) :string{

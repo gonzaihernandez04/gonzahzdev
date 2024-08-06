@@ -97,11 +97,11 @@
         margin-bottom: 3rem;
         overflow: hidden;
         transition: height .4s ease;
-        &--proyectos{
-            height: 200px;
+        &--extender{
+            height: 100px;
         }
         &--expandido{
-            height: 500px;
+            height: 400px;
         }
       
     }

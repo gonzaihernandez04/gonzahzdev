@@ -14,23 +14,37 @@
                         <p><?php echo $opinion->persona["apellido"] ?? ''; ?></p>
                     </div>
 
-                    <p><?php echo $opinion->persona["email"] ?? ''; ?></p>
                 </div>
+
+
+
+                <?// Parto para que en caso de que haya mas de un parrafo, deje espacios entre bloques?>
+                <?php $parrafos = partirParrafo($opinion->comentario); ?>
+
+
+                <div class="seccion__parrafo seccion__parrafo--extender">
+
+                    <?php foreach ($parrafos as $key => $parrafo) : ?>
+                        <p class="card__mensaje lh-2"><?php echo $parrafos[$key] ?></p>
+                    <?php endforeach; ?>
+
+                </div>
+             
+                <?php if (count($parrafos) > 1) { ?>
+                    <p class="seccion__guia">Seguir Leyendo</p>
+                <?php } ?>
+
 
                 <div class="card__stars">
-                <div class="stars">
-                <?php for ($i = 5; $i >= 1; $i--) : ?>
-                    <input id="radio<?php echo $i; ?>" type="radio" name="estrellas" value="<?php echo $i; ?>">
-                    <label for="radio<?php echo $i; ?>">★</label>
-                <?php endfor; ?>
-            </div>
+                    <div class="stars">
+                        <?php for ($i = (int) $opinion->puntuacion; $i >= 1; $i--) : ?>
+                            <label for="radio<?php echo $i; ?>" class="activado">★</label>
+                        <?php endfor; ?>
+                    </div>
                 </div>
             </div>
 
 
-            <div class="card__mensaje">
-                <p><?php echo $opinion->comentario ?? ''; ?></p>
-            </div>
 
 
 

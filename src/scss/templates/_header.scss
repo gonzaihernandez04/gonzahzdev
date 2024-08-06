@@ -45,6 +45,7 @@
 }
 }
 
+// TODO: NAVEGACION PARA MENOR A DESKTOP: RESPONSIVE
 .navegacion{
     position: fixed;
     background-color: v.$blanco;
@@ -54,6 +55,10 @@
     height: 100vh;
     padding: 4rem 4rem;
     @include m.boxShadow;
+    display: none;
+    @include m.desktop{
+        display: block;
+    }
     &__enlaces{
         display: flex;
         flex-direction: column;
