@@ -90,49 +90,55 @@ body {
 
         }
 
-        .formulario{
+        .formulario {
 
-            label{
+            label {
                 color: v.$blanco;
             }
+
             input {
                 background-color: v.$negro;
                 border: none;
                 color: v.$blanco;
             }
 
-            &__opciones{
+            &__opciones {
                 background-color: v.$negro;
                 padding: 0;
             }
-            &__opcion{
+
+            &__opcion {
                 background-color: v.$negro;
                 color: v.$blanco;
-                &:hover{
-                    background-color: darken(v.$negro,30%);
+
+                &:hover {
+                    background-color: darken(v.$negro, 30%);
                 }
             }
-            &__aclaracion{
+
+            &__aclaracion {
                 color: v.$blanco;
                 background-color: v.$negro;
             }
-         
-            &__modal{
+
+            &__modal {
                 background-color: v.$negro;
                 color: v.$blanco;
             }
-            &__boton{
+
+            &__boton {
                 background-color: v.$negro;
                 color: v.$blanco;
             }
-            &__recomendacion{
-                p{
+
+            &__recomendacion {
+                p {
                     color: v.$blanco;
                 }
             }
 
-            &__textarea{
-                textarea{
+            &__textarea {
+                textarea {
                     background-color: v.$negro;
                     border-color: v.$negro;
                     color: v.$blanco;
@@ -140,13 +146,29 @@ body {
             }
 
         }
-    
 
 
 
+        .card {
+            &__persona {
+                &-nombre {
+                    p {
+
+                        color: invert(v.$negro, 100%);
+                    }
+                }
+
+            }
+
+            &__mensaje {
+                color: invert(v.$negro,70%)
+
+
+            }
 
 
 
+        }
     }
 }
 
@@ -170,7 +192,8 @@ ul,
 input,
 textarea,
 button,
-small, input {
+small,
+input {
     font-family: v.$fuente !important;
 
 }
@@ -241,7 +264,7 @@ img {
     animation: shake 2s linear infinite;
 }
 
-.rotate{
+.rotate {
     animation: rotate 1s linear;
 }
 
@@ -267,22 +290,25 @@ img {
 
 }
 
-input[type="submit"],button:hover{
+input[type="submit"],
+button:hover {
     cursor: pointer;
 }
 
 @keyframes rotate {
-    0%{
+    0% {
         transform: rotate(0deg);
     }
-    10%{
+
+    10% {
         transform: rotate(10deg);
     }
-    50%{
+
+    50% {
         transform: rotate(270deg);
     }
 
-    100%{
+    100% {
         transform: rotate(360deg);
     }
 }

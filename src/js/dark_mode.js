@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     const body = document.querySelector('body');
-    console.log(window.location.href);
         const switchDark = document.querySelector('.switch-button >input');
         if (!switchDark) {
             return;

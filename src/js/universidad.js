@@ -19,7 +19,7 @@ Asegura la Integridad de los Datos: Evita que los caracteres especiales interfie
 
       try {
         const response = await fetch(
-          `http://localhost:3000/api/universidades?query=${encodeURIComponent(
+          `${window.location.origin}/api/universidades?query=${encodeURIComponent(
             universidad
           )}`,
           {

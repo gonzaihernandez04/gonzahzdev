@@ -3,8 +3,8 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 async function apiTech() {
-  // TODO cambiar URL para la API
-  const response = await fetch("http://localhost:3000/api/tecnologias");
+
+  const response = await fetch(`${window.location.origin}/api/tecnologias`);
   const tecnologias = await response.json();
   imprimirTecnologias(tecnologias);
 }

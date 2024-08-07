@@ -5,7 +5,7 @@
 
 
     &__container{
-        padding: 2rem 0rem;
+        padding: 3rem 0rem;
     
         display: flex;
         align-items: center;
@@ -16,7 +16,7 @@
     
 }
 &__foto{
-    width: 250px;
+    width: 200px;
 }
 &__data{
     display: flex;
@@ -25,13 +25,14 @@
 }
 
 &__nombre h1{
-    font-size: 3rem;
-    margin: 1rem 0;
-    color: v.$negro;
+    @include m.ajustarTexto(1.3rem,2.5rem);
+    color: lighten(v.$negro,10%);
+    margin: 0
 }
 &__profesion {
 
     h3{
+        @include m.ajustarTexto(.9rem,1.1rem);
         color: v.$grisOscuro;
         font-weight: 500;
         margin: .5rem 0;  
@@ -41,7 +42,7 @@
 &__localidad h4{
     margin: 0 ;
     color: v.$grisOscuro;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 }
 
@@ -53,7 +54,8 @@
     right: 0;
     top: 0;
     height: 100vh;
-    padding: 4rem 4rem;
+    transition: padding .2s ease-in;
+    padding: 4rem 2rem;
     @include m.boxShadow;
     display: none;
     @include m.desktop{
@@ -72,5 +74,8 @@
         display: flex;
         align-items: center;
         gap: 1.5rem;
+    }
+    &:hover{
+        padding-inline: 3rem;
     }
 }
