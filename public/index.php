@@ -40,12 +40,24 @@ $router->get('/docencia/opiniones/crear',[DocenciaController::class,"crear"]);
 $router->post('/docencia/opiniones/crear',[DocenciaController::class,"crear"]);
 
 
+
+// BLOG
+//$router->get('/blog',[BlogController::class,"index"]);
+
+
+// Contacto
+
+$router->get('/contacto',[IndexController::class, "contacto"]);
+
+
+
 //API
 
 
 $router->get('/api/tecnologias',[ApiTecnologiasController::class,"getTech"]);
 
 $router->get('/api/universidades',[ApiUniversidadesController::class,"getUniversity"]);
+
 
 
 // Comprueba y valida las rutas, que existan y les asigna las funciones del Controlador

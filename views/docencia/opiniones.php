@@ -24,9 +24,17 @@
 
                 <div class="seccion__parrafo seccion__parrafo--extender">
 
-                    <?php foreach ($parrafos as $key => $parrafo) : ?>
+                    <?php if(count($parrafos)>0){
+
+                        foreach ($parrafos as $key => $parrafo) { ?>
                         <p class="card__mensaje lh-2"><?php echo $parrafos[$key] ?></p>
-                    <?php endforeach; ?>
+
+                    <?php } 
+                
+                        }else{?>
+                        <p class="card__mensaje lh-2">No un mensaje para esta opinion</p>
+
+                        <?php }; ?>
 
                 </div>
              

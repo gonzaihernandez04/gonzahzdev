@@ -12,8 +12,6 @@ class DocenciaController
 {
     public static function index(Router $router)
     {
-
-
         $router->render("docencia/index", [
             "titulo" => "Docencia 👨🏻‍🏫"
         ]);
@@ -50,6 +48,7 @@ class DocenciaController
 
     public static function crear(Router $router): void
     {
+
         $alertas = [];
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -68,6 +67,7 @@ class DocenciaController
                         $personaId = Persona::getId('email', $persona->email);
 
                         $opinion = new Opinion($personaId, (string)sanitizar($_POST['estrellas']), sanitizar($_POST['comentario']));
+                            
 
 
                         $opinion->guardar();

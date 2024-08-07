@@ -23,7 +23,6 @@ window.addEventListener('DOMContentLoaded',()=>{
         if (resultado.isConfirmed){
             setTimeout(() => {
                 form.submit();
-                window.location.href = "http://localhost:3000/docencia/opiniones";
             }, 2000);
 
         }
