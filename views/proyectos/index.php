@@ -8,8 +8,8 @@
                     <a href="<?php echo sanitizar($proyecto->urlWeb ?? '');?>">
 
                         <picture>
-                            <source srcset="build/img/<?php echo $proyecto->imagen ?? ''; ?>.webp" type="image/webp">
-                            <img src="build/img/<?php echo sanitizar($proyecto->imagen) ?? ''; ?>.png" loading="lazy" alt="Imagen del proyecto">
+                            <source srcset="public/build/img/<?php echo $proyecto->imagen ?? ''; ?>.webp" type="image/webp">
+                            <img src="public/build/img/<?php echo sanitizar($proyecto->imagen) ?? ''; ?>.png" loading="lazy" alt="Imagen del proyecto">
                         </picture>
 
                     </a>

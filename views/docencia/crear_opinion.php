@@ -13,4 +13,4 @@
 
 
 </section>
-<?php $script = "<script src='/build/js/universidad.js'></script>"?>
+<?php $script = "<script src='public/build/js/universidad.js'></script>"?>

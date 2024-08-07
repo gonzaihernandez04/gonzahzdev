@@ -15,5 +15,5 @@
 
 
 </div>
-<?php $script = "<script src='build/js/tecnologias.js'></script>"?>
+<?php $script = "<script src='public/build/js/tecnologias.js'></script>"?>
 </section>

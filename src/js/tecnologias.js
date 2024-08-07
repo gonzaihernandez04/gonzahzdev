@@ -44,7 +44,7 @@ function mostrarTech(slidesMap, tecnologias, slideContainer) {
 
             slide.setAttribute("data-tipo", tecnologia.tipoLenguaje);
             const slideImg = `
-                <img src="build/img/tecnologias/${tecnologia.imagen}.svg" loading="lazy" class="slides-container__slide-img" alt="${tecnologia.descripcion}" />
+                <img src="public/build/img/tecnologias/${tecnologia.imagen}.svg" loading="lazy" class="slides-container__slide-img" alt="${tecnologia.descripcion}" />
             `;
             slide.innerHTML += slideImg;
         

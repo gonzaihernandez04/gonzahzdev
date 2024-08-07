@@ -9,14 +9,12 @@
                 <div class="seccion__card-img">
                     
                     <picture>
-                        <source srcset="build/img/<?php echo $tituloIns->imagen; ?>.webp" type="image/webp">
+                        <source srcset="/public/build/img/<?php echo $tituloIns->imagen; ?>.webp" type="image/webp">
                         
                         
                         <?php if(str_contains($tituloIns->imagen,"nil") ){?>
-                       
-                            <video src="build/img/puntos.gif" alt="ptm abuela" >
-                        <?php }else{?>
-                            <img src="build/img/<?php echo $tituloIns->imagen; ?>.png" alt="<?php echo $tituloIns->imagen;?>" >
+                                               <?php }else{?>
+                            <img src="/public/build/img/<?php echo $tituloIns->imagen; ?>.png" alt="<?php echo $tituloIns->imagen;?>" >
                         <?php }   ?>
                     </picture>
                 </div>
