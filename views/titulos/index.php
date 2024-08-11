@@ -9,12 +9,12 @@
                 <div class="seccion__card-img">
                     
                     <picture>
-                        <source srcset="/public/build/img/<?php echo $tituloIns->imagen; ?>.webp" type="image/webp">
+                        <source srcset="/build/img/<?php echo $tituloIns->imagen; ?>.webp" type="image/webp">
                         
                         
                         <?php if(str_contains($tituloIns->imagen,"nil") ){?>
                                                <?php }else{?>
-                            <img src="/public/build/img/<?php echo $tituloIns->imagen; ?>.png" alt="<?php echo $tituloIns->imagen;?>" >
+                            <img src="/build/img/<?php echo $tituloIns->imagen; ?>.png" alt="<?php echo $tituloIns->imagen;?>" >
                         <?php }   ?>
                     </picture>
                 </div>

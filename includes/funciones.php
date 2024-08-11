@@ -61,7 +61,7 @@ function findUniversity($query) {
 
 
 
-    curl_setopt($ch, CURLOPT_USERAGENT, 'gonzahzportfolio (gonzahernandezdev@gmail.com - localhost)');
+    curl_setopt($ch, CURLOPT_USERAGENT, `gonzahzportfolio ({$_ENV["MAIL_USER"]} - {$_ENV["APP_URL"]})`);
 
     // Ejecutar la solicitud y obtener la respuesta
     $response = curl_exec($ch);

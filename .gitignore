@@ -6,4 +6,4 @@ composer.json
 composer.lock
 package-lock.json
 db.sql
-.env
+includes/.env
