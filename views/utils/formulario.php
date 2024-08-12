@@ -22,12 +22,12 @@
 
             <p class="formulario__aclaracion" aria-hidden="Si sos de la UBA, busca UBA y tu facultad, ejemplo (Ingenieria)">?</p>
         </div>
-        <button class="formulario__button formulario__button--buscar formulario__boton">
+        <!-- <button class="formulario__button formulario__button--buscar formulario__boton" type="button">
             Buscar
         </button>
         <div class="formulario__opciones">
 
-        </div>
+        </div> -->
 
     </div>
 
