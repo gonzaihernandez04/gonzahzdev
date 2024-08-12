@@ -10,6 +10,9 @@
     }
     &__enlaces{
         padding: 0 5rem;
+        &--inactivo:hover{
+            cursor: pointer !important;
+        }
 
     }
     

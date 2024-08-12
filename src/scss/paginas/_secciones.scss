@@ -13,7 +13,7 @@
     }
 
     &__titulo {
-        font-size: 1.4rem;
+        @include m.ajustarTexto(1rem,1.5rem);
         color: v.$negro;
     }
 
@@ -31,13 +31,17 @@
 
     &__texto {
         text-align: justify;
+
         width: 90%;
         &--proyectos{
             text-align: left;
         }
+        &--left{
+            text-align: left;
+        }
         h3 {
             margin-top: 1.7rem;
-            font-size: 1.4rem;
+            @include m.ajustarTexto(.8rem,1.3rem);
             margin-bottom: 0;
         }
 
@@ -69,10 +73,10 @@
         }
 
         &-img {
-            width: 400px;
+            width: 100%;
 
             &--proyectos {
-                max-height: 200px;
+                max-height: 150px;
 
                 img {
                     border-top-left-radius: 20px;
@@ -85,11 +89,28 @@
                 height: 100%;
                 object-fit: cover;
             }
+            &--titulos{
+                max-width: 400px;
+            }
         }
     }
 
     &__grid {
-        padding-inline: 5rem;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        row-gap: 3rem;
+        @include m.desktop{
+            grid-template-columns: repeat(2,1fr);
+
+        }
+        @include m.desktopXL{
+            grid-template-columns: repeat(3,1fr);
+
+        }
+
+        @include m.desktop2XL{
+          grid-template-columns: repeat(4,1fr);
+        }
     }
 
     &__parrafo{

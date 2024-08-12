@@ -15,11 +15,38 @@
             <a href="/redes" class="secciones__enlace ">Blog</a>
             <a href="/redes" class="secciones__enlace ">Contacto</a>
 
-            <a href="/redes" class="secciones__enlace swiper-slide">Redes Sociales</a>
+            <span class="secciones__enlace swiper-slide secciones__enlace--inactivo btn-abrir-modal">Redes Sociales</span>
         </div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-pagination"></div>
 
     </div>
+
+
+
+    <?php include_once __DIR__ . '/modal_base.php';?>
+
+        <div class="modal__content-title">
+            <h2>Redes sociales</h2>
+        </div>  
+        <div class="modal__items">
+        <a class="modal__items-enlace" href="https://www.linkedin.com/in/gonza-hernandez/">
+            <div class="modal__items-item modal__items-item--linkedin">
+                 Linkedin
+            </div>
+
+            </a>
+            <a class="modal__items-enlace " href="https://github.com/gonzaihernandez04">
+            <div class="modal__items-item modal__items-item--git">
+              GitHub
+            </div>
+            </a>
+        </div>
+    
+    <!--Cierra divs del modal--> 
+    </div>
+    </div>
+
 </div>
+

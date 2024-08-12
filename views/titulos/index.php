@@ -6,7 +6,7 @@
         <?php foreach($titulos as $tituloIns):?>
       <div class="swiper-slide">
             <div class="seccion__card">
-                <div class="seccion__card-img">
+                <div class="seccion__card-img seccion__card-img--titulos">
                     
                     <picture>
                         <source srcset="/build/img/<?php echo $tituloIns->imagen; ?>.webp" type="image/webp">
@@ -18,7 +18,7 @@
                         <?php }   ?>
                     </picture>
                 </div>
-                <div class="seccion__texto">
+                <div class="seccion__texto seccion__texto--left">
                     <h3><?php echo $tituloIns->nombre ?? '';?></h3>
                     <p>Duracion: <?php echo $tituloIns->duracion?></p>
                 </div>

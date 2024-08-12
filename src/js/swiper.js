@@ -1,6 +1,6 @@
 // core version + navigation, pagination modules:
 import Swiper from "swiper/bundle";
-import { Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       breakpoints: {
         768: {
-          slidesPerView: 2,
+          slidesPerView: 1,
         },
         1024: {
           slidesPerView: 3,
@@ -35,14 +35,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     const options2 = {
-      slidesPerView: 2,
+   
+      autoplay: {
+        delay: 1500,
+    },
       scrollbar: {
         el: ".swiper-scrollbar",
-        hide: true,
+   
       },
+
+      breakpoints:{
+        768:{
+          slidesPerView: 1,
+        },
+        1024:{
+          slidesPerView: 2,
+        },
+        1420:{
+          slidesPerView: 3,
+        }
+
+
+      }
     };
 
-    Swiper.use([Navigation]);
+    Swiper.use([Navigation,Autoplay]);
     new Swiper(".swiper2", options2);
 
   

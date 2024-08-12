@@ -1,0 +1,77 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+.modal{
+    @include m.boxShadow();
+    position: fixed;
+    padding: 3rem;
+    transition: all .3s ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+    background-color: v.$blanco;
+    &__content{
+       height: 100%;
+        &-title{
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+       
+    }
+    &__items{
+        display: flex;
+        flex-direction: column;
+   
+        row-gap: 2rem;
+        height: 100%;
+        &-item{
+            transition: all .2s ease-in-out;
+            margin-bottom: 1rem;
+            padding-block: 1rem;
+            padding-inline: 3rem;
+            width: 15%;
+            margin: 0 auto;
+            border-radius: 15px;
+            text-align: center;
+            font-weight: 700;
+            @include m.boxShadow();
+
+            &:hover{
+                cursor: pointer;
+            }
+            &--linkedin{
+                &:hover{
+                    background-color: v.$azul;
+                    color: v.$blanco;
+                
+                }
+            }
+            &--git{
+                &:hover{
+                    background-color: darken(v.$negro,5%);
+                   
+                
+                        color: v.$blanco;
+               
+                }
+            }
+           
+        }
+        &-enlace{ //ETIQUETA A
+            width: 100%;
+            text-decoration: none;
+            color: v.$negro;
+            
+
+        }
+    }
+
+    &--mostrar{
+        opacity: 1;
+        visibility: visible;
+        z-index: 100;
+    }
+}

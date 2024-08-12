@@ -1,15 +1,15 @@
 @use 'variables' as v;
 @use 'mixins' as m;
 
-.contenido {
-    width: 90%;
-}
+
 
 body {
+    position: relative;
     background-color: rgb(248, 248, 248);
     padding: 2rem 0;
     margin: 0;
 
+    transition: all .2s ease-in-out;
     &.darkmode {
         background-color: darken(v.$negro, 4%);
 
@@ -169,6 +169,29 @@ body {
 
 
         }
+        .modal{
+            background-color: v.$negro;
+            &__content{
+                &-title{
+                    color: v.$blanco;
+                }
+            }
+            &__items{
+                &-enlace{
+                    color: v.$blanco;
+               
+                }
+                &-item{
+                    box-shadow: none;
+                    border: 2px solid v.$blanco;
+                    color: v.$blanco;
+                }
+            }
+        }
+
+        .menu{
+            fill: v.$blanco;
+        }
     }
 }
 
@@ -224,7 +247,10 @@ input {
 .separador {
     display: block;
     border: .2px solid lighten(v.$negro, 50%);
-    width: 80%;
+    width: 100%;
+    @include m.desktop{
+        width: 80%;
+    }
 
 }
 
