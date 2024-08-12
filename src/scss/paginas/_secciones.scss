@@ -15,12 +15,24 @@
     &__titulo {
         @include m.ajustarTexto(1rem,1.5rem);
         color: v.$negro;
+        text-align: center;
+        @include m.tablet{
+            text-align: left;
+            
+        }
     }
 
     &__row {
         display: flex;
         align-items: center;
-        gap: 3rem;
+        flex-direction: column;
+        text-align: center;
+        gap: .5rem;
+        @include m.tablet{
+            gap: 3rem;
+            flex-direction: row;
+            text-align: left;
+        }
 
         &-subdata {
             color: lighten(v.$negro, 25%);
@@ -30,8 +42,7 @@
     }
 
     &__texto {
-        text-align: justify;
-
+        text-align: center;
         width: 90%;
         &--proyectos{
             text-align: left;
@@ -43,6 +54,10 @@
             margin-top: 1.7rem;
             @include m.ajustarTexto(.8rem,1.3rem);
             margin-bottom: 0;
+        }
+        @include m.tablet{
+            text-align: justify;
+
         }
 
        
@@ -117,12 +132,17 @@
         line-height: 2rem;
         margin-bottom: 3rem;
         overflow: hidden;
+        text-align: center;
+
         transition: height .4s ease;
         &--extender{
             height: 100px;
         }
         &--expandido{
             height: 400px;
+        }
+        @include m.tablet{
+            text-align: left;
         }
       
     }

@@ -3,7 +3,7 @@
     <?php foreach ($estudios as $key => $estudio) : ?>
         <div class="seccion__subtitulo">
             <div class="seccion__row">
-                <h3><?php echo $estudio->nombreInstitucion; ?>  </h3>|
+                <h3><?php echo $estudio->nombreInstitucion; ?>  </h3>
                 <p class="seccion__row-subdata"><?php echo $estudio->fecha ?? "No finalizado" ?></p>
             </div>
             <div class="seccion__texto">
