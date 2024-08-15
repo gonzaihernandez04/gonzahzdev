@@ -9,10 +9,11 @@
     
         display: flex;
         align-items: center;
-        gap: 5rem;
+        gap: 1.5rem;
         flex-direction: column;
         @include m.desktop{
             flex-direction: row;
+            gap: 5rem;
             
         }
     }

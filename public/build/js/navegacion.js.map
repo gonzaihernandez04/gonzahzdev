@@ -1,0 +1,1 @@
+{"version":3,"sources":["navegacion.js"],"names":["window","addEventListener","e","document","querySelector","n","classList","toggle"],"mappings":"AAAAA,OAAOC,iBAAiB,mBAAmB,KAAM,MAAMC,EAAEC,SAASC,cAAc,SAAS,IAAIF,EAAE,OAAO,MAAMG,EAAEF,SAASC,cAAc,eAAeC,GAAGH,EAAED,iBAAiB,SAAQ,WAAYI,EAAEC,UAAUC,OAAO","file":"navegacion.js","sourcesContent":[]}

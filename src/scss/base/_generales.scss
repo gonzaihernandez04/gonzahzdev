@@ -309,6 +309,12 @@ img {
     color: darken(v.$azul, 10%);
     transition: color .2s ease;
 
+    &--left{
+        text-align: left;
+    }
+    &--right{
+        text-align: right;
+    }
     &:hover {
         cursor: pointer;
         color: darken(v.$azul, 30%);

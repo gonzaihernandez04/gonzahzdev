@@ -1,2 +1,2 @@
-window.addEventListener("DOMContentLoaded",()=>{const e=document.querySelector(".menu");if(!e)return;const n=document.querySelector(".navegacion");n&&e.addEventListener("click",(function(){n.classList.toggle("navegacion--mostrar")}))});
+window.addEventListener("DOMContentLoaded",()=>{const e=document.querySelector(".modal");if(!e)return;const t=document.querySelector(".btn-cerrar");if(!t)return;const n=document.querySelector(".btn-abrir-modal");n&&(console.log(t),t.addEventListener("click",(function(){e.classList.remove("modal--mostrar")})),n.addEventListener("click",(function(){e.classList.add("modal--mostrar")})))});
 //# sourceMappingURL=modal.js.map
