@@ -7,26 +7,30 @@ import "swiper/css/navigation";
 document.addEventListener("DOMContentLoaded", () => {
   if (document.querySelector(".swiper")) {
     const options = {
-      slidesPerView: 2,
-      spaceBetween: 15,
+
+      slidesPerView:1,
+      spaceBetween:1,
+      breakpoints:{
+        500:{
+          slidesPerView: 2,
+          spaceBetween:4,
+        },
+        768: {
+          slidesPerView:3,
+          spaceBetween:4
+        },
+        1366: {
+          slidesPerView:5,
+          spaceBetween: 8,
+        }
+      },
 
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
 
-      breakpoints: {
-        768: {
-          slidesPerView: 1,
-        },
-        1024: {
-          slidesPerView: 3,
-        },
-
-        1200: {
-          slidesPerView: 4,
-        },
-      },
+   
     };
 
     Swiper.use([Navigation]);

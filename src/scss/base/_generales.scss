@@ -273,8 +273,20 @@ img {
 }
 
 .swiper-slide {
-    width: fit-content !important;
-    margin-right: 3rem !important;
+    margin-right: 2rem !important;
+    @media (min-width:200px){
+        width: 250px !important;
+    }
+
+    @media (min-width:450px){
+        width: 200px !important;
+    }
+
+        @include m.tablet{
+            width: fit-content !important;
+
+        }
+    
 }
 
 .swiper2 {
