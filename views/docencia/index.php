@@ -6,7 +6,7 @@
 
   <h3>Docente de programacion</h3>
   <p class="lh-2">En el año 2023, ingrese a una empresa que asignaba profesores para dar clases, entre ello, elegi ser profesor de programación web. Imparti clases tanto a personas universitarias alumnos de la Univesidad de Palermo, Ditella, Uade, UTN, etc, asi como a otros que querian solo aprender por gusto.</p>
-  <p>Si queres ver las opiniones de mis alumnos, entra a la seccion de <a href="/docencia/opiniones" style="text-decoration:none"><mark class="seccion__mark seccion__mark--celeste">Opiniones de alumnos</mark></a></p>
+  <p class="lh-2">Si queres ver las opiniones de mis alumnos, entra a la seccion de <a href="/docencia/opiniones" style="text-decoration:none"><mark class="seccion__mark seccion__mark--celeste">Opiniones de alumnos</mark></a></p>
 
   <p>Actualmente sigo siendo profesor ya que es algo que me gusta hacer.</p>
 
