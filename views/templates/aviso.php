@@ -1,0 +1,1 @@
+<p class="aviso">No existe ninguna publicacion por ahora...</p>

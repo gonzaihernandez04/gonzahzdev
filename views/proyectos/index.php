@@ -36,3 +36,5 @@
     </div>
 </section>
 
+<?php $script = "<script src='/build/js/expandir.js'></script>" ?>
+

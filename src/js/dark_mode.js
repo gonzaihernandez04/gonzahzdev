@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    function getLocalStorageItems(){
+     function getLocalStorageItems(){
         const isDarkMode = localStorage.getItem('darkmode') === 'true'
         const isChecked = localStorage.getItem('isChecked') === 'true'
 

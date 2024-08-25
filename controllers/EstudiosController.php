@@ -12,7 +12,9 @@ class EstudiosController{
        
         $router->render("estudios/index",[
             "titulo"=>"Estudios 📚",
-            "estudios"=>$estudios
+            "estudios"=>$estudios,
+            "isHeaderVisible"=>true
+
         ]);
     }
 

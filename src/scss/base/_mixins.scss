@@ -25,6 +25,19 @@
 }
 
 
+@mixin telefonoSm{
+    @media(min-width: v.$telefonoSm){
+        @content;
+    }
+}
+
+@mixin telefono{
+    @media(min-width: v.$telefono){
+        @content;
+    }
+}
+
+
 @mixin tablet{
     @media(min-width: v.$tablet){
         @content;

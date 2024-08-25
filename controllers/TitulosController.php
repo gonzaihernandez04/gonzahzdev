@@ -10,7 +10,9 @@ class TitulosController{
        
         $router->render("titulos/index",[
             "titulo" => "Titulos y certificaciones 📑",
-            "titulos" => $titulos
+            "titulos" => $titulos,
+            "isHeaderVisible"=>true
+
         ]);
 
     }

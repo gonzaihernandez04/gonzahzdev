@@ -12,7 +12,7 @@
             <a href="/tecnologias" class="secciones__enlace seccion__enlace--actual swiper-slide">Tecnologias</a>
             <a href="/docencia" class="secciones__enlace">Docencia</a>
             <a href="/docencia/opiniones" class="secciones__enlace swiper-slide">Opiniones de alumnos</a>
-            <a href="/redes" class="secciones__enlace ">Blog</a>
+            <a href="/blog" class="secciones__enlace ">Blog</a>
             <a href="/redes" class="secciones__enlace ">Contacto</a>
 
             <span class="secciones__enlace swiper-slide secciones__enlace--inactivo btn-abrir-modal">Redes Sociales</span>

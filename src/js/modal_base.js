@@ -6,7 +6,6 @@ window.addEventListener('DOMContentLoaded',()=>{
     const btnAbrir = document.querySelector('.btn-abrir-modal');
     if (!btnAbrir) return;
 
-    console.log(btnCerrar);
     btnCerrar.addEventListener('click',cerrarModal)
 
     function cerrarModal(){

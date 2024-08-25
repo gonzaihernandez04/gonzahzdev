@@ -31,7 +31,7 @@ function mostrarTech(slidesMap, tecnologias, slideContainer) {
             if (!slidesMap.has(tipo)) {
                 headingTipo = document.createElement("H3");
                headingTipo.textContent = tipo;
-               headingTipo.classList.add('seccion__texto');
+               headingTipo.classList.add('slides-container__title');
                 const slide = document.createElement("DIV");
                 slide.classList.add("slides-container__slide");
                 slideContainer.appendChild(headingTipo)

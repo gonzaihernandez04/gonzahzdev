@@ -1,0 +1,141 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+.blog{
+
+    &__heading{
+        display: grid;
+  
+        gap: 1rem;
+        &--grande{
+            width: 100%;
+        }
+        @include m.desktop{
+            grid-template-columns: repeat(2,1fr);
+            gap: 6rem;
+        }
+     
+        &-text{
+            text-align: left;
+
+            &--grande{
+                text-align: center;
+            }
+        }
+        &-title{
+            h3{
+                font-weight: 900;
+                font-size: 1.3rem;
+                color: ligthen(v.$negro,10%);
+                margin: 0;
+               }
+            &--grande{
+                h3{
+                    @include m.ajustarTexto(1.2rem,2.3rem);
+
+                }
+            }
+
+          
+        }
+        &-descripcion{
+            margin: 2rem 0;
+            p{
+                line-height: 2rem;
+                text-align: justify;
+                display: -webkit-box;       /* Flexbox antiguo, necesario para compatibilidad */
+    -webkit-box-orient: vertical;  /* Configura la orientación de las líneas */
+    overflow: hidden;           /* Oculta el texto que sobrepase el límite */
+    -webkit-line-clamp: 2;   
+    color: lighten(v.$negro,20%);
+            }
+        }
+        &-fecha{
+            color: lighten(v.$negro,40%);
+        }
+        &-img{
+            img{
+                min-width: 200px;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+  
+
+}
+.publicacion{
+    display: grid;
+    column-gap: 5rem;
+   
+
+    @include m.desktop{
+        min-width: 95%;
+        width: auto;
+        grid-template-columns: 1.5fr .7fr;
+    }
+    
+    /*PUBLICACION SINGULAR*/
+    &--single{
+        position: relative;
+       
+        margin: 0rem auto;
+        padding: 0rem .5rem;
+        @include m.desktop{
+            max-width: 60% ;
+            padding: 2rem 0;
+
+        }
+    }
+    
+    &__img{
+      
+        max-height: 430px;
+       
+        overflow: hidden;
+        margin: 0rem auto;
+        margin-top: 2rem;
+        
+    
+  
+    }
+    &__informacion{
+     width: 100%;
+
+    
+   
+    }
+   
+    &__fecha{
+        text-align: center;
+        font-weight: 700;
+        color: lighten(v.$negro,20%);
+
+        p{
+            @include m.ajustarTexto(.6rem,.8rem);
+           
+        }
+        @include m.desktop{
+            text-align: right;
+
+        }
+
+    }
+    &__descripcion{
+       
+        color: lighten(v.$negro,20%);
+        text-align: center;
+        p{
+            @include m.ajustarTexto(.8rem,1.1rem);
+            line-height: 2.4rem;
+        }
+        @include m.desktop{
+            text-align: left;
+        }
+    }
+    &__volver{
+        a{
+            text-decoration: none;
+            color: v.$negro;
+        }
+    }
+}

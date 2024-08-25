@@ -80,3 +80,62 @@ function sanitizar($variable) :string{
 //     return json_encode($data);
   
 // }
+
+
+function fechaNumericaATexto($fecha) : string{
+    $hashMapMeses = getHashMapMeses();
+    if(!$fecha){
+        return "";
+    }
+    $partes = explode("-",$fecha);
+    if(count($partes) == 0){
+        return "" ;
+    }else{
+        $mesNumerico = $partes[1];
+
+
+        $mesTexto = $hashMapMeses[$mesNumerico];
+        return $partes[2] . " de " . $mesTexto . " de " . $partes[0];
+    }
+   
+
+}
+function getHashMapMeses(): array{
+    $hashMapMeses = [
+        "01" => "Enero",
+        "02"=>"Febrero",
+        "03"=>"Marzo",
+        "04"=>"Abril",
+        "05"=>"Mayo",
+        "06"=>"Junio",
+        "07"=>"Julio",
+        "08"=>"Agosto",
+        "09"=>"Septiembre",
+        "10"=>"Octubre",
+        "11"=>"Noviembre",
+        "12"=>"Diciembre",
+    ];
+    return $hashMapMeses;
+}
+
+
+// Funcion que hashea data para luego deshashear
+function hashData($data){
+$key = $_ENV["HASH_KEY"];
+$iv = '1234567891011121'; // Un IV (vector de inicialización) de 16 bytes
+$encrypted = openssl_encrypt($data, 'aes-256-cbc', $key, 0,$iv);
+
+return $encrypted;
+
+}
+
+//Funcion que deshashea data.
+function unhashData($encryptedData){
+    $key = $_ENV["HASH_KEY"];
+    $iv = '1234567891011121'; // Un IV (vector de inicialización) de 16 bytes
+
+    $decrypt = openssl_decrypt($encryptedData,'aes-256-cbc',$key,0,$iv);
+
+    return $decrypt;
+
+}

@@ -13,7 +13,9 @@ class ProyectosController{
         
         $router->render("proyectos/index",[
             "titulo"=>'Proyectos ⌨️',
-            "proyectos" => $proyectos
+            "proyectos" => $proyectos,
+            "isHeaderVisible"=>true
+
         ]);
     }
 }

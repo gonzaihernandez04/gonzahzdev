@@ -43,7 +43,7 @@
 }
 &__profesion {
 
-    h3{
+    h2{
         @include m.ajustarTexto(.9rem,1.1rem);
         color: v.$grisOscuro;
         font-weight: 500;
@@ -51,7 +51,7 @@
     }
 
 }
-&__localidad h4{
+&__localidad h3{
     margin: 0 ;
     color: v.$grisOscuro;
     font-size: 1rem;
@@ -115,22 +115,3 @@
   
 }
 
-.menu{
-    position: fixed;
-    height: 32px;
-    width: 32px;
-    top: 5%;
-    z-index: 10000;
-    right: 2%;
-    &:hover{
-        cursor: pointer;
-    }
-
-    @include m.desktop{
-        
-        height: 38px;
-        width: 38px;
-        }
-
-
-}

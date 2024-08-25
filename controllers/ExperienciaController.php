@@ -10,7 +10,9 @@ class ExperienciaController{
         
         $router->render('experiencia/index',[
             'titulo'=>"Experiencia ⚡",
-            'experiencias' =>$experiencias ?? []
+            'experiencias' =>$experiencias ?? [],
+            "isHeaderVisible"=>true
+
         ]);
     }
 

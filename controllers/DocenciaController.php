@@ -13,7 +13,9 @@ class DocenciaController
     public static function index(Router $router)
     {
         $router->render("docencia/index", [
-            "titulo" => "Docencia 👨🏻‍🏫"
+            "titulo" => "Docencia 👨🏻‍🏫",
+            "isHeaderVisible"=>true
+
         ]);
     }
 

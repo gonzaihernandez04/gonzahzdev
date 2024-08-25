@@ -29,6 +29,11 @@ class ComposerStaticInitfc56057d6a293759d7d46014d9ec8664
             'Model\\' => 6,
             'MVC\\' => 4,
         ),
+        'I' => 
+        array (
+            'Intervention\\Image\\' => 19,
+            'Intervention\\Gif\\' => 17,
+        ),
         'G' => 
         array (
             'GrahamCampbell\\ResultType\\' => 26,
@@ -72,6 +77,14 @@ class ComposerStaticInitfc56057d6a293759d7d46014d9ec8664
         'MVC\\' => 
         array (
             0 => __DIR__ . '/../..' . '/',
+        ),
+        'Intervention\\Image\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/intervention/image/src',
+        ),
+        'Intervention\\Gif\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/intervention/gif/src',
         ),
         'GrahamCampbell\\ResultType\\' => 
         array (

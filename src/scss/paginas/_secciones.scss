@@ -3,7 +3,7 @@
 
 .seccion {
     
-
+    min-width: 390px;
     max-height: 1000px;
     @include m.tablet{
         max-height: 700px;
@@ -139,7 +139,11 @@
             height: 100px;
         }
         &--expandido{
-            height: 400px;
+            height: 800px;
+
+            @include m.tablet{
+                height: 600px;
+            }
         }
         @include m.tablet{
             text-align: left;
@@ -172,4 +176,11 @@
   
 
 
+}
+
+
+.aviso{
+    @include m.ajustarTexto(1.5rem,2rem);
+    text-align: center;
+    font-weight: 700;
 }

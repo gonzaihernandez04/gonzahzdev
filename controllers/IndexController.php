@@ -9,7 +9,9 @@ class IndexController{
         
 
         $router->render('index/index',[
-            'titulo'=>"Sobre mi 👨🏻‍💻🎸"
+            'titulo'=>"Sobre mi 👨🏻‍💻🎸",
+            "isHeaderVisible"=>true
+
         ]);
     }
 

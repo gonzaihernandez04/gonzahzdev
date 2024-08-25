@@ -10,6 +10,8 @@ class TecnologiasController{
        
         $router->render("tecnologias/index",[
             "titulo" => "Tecnologias 🚀",
+            "isHeaderVisible"=>true
+
         ]);
     }
 }

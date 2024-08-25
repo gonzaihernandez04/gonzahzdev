@@ -18,11 +18,11 @@ body {
                 color: v.$blanco;
             }
 
-            &__profesion h3 {
-                color: darken(v.$blanco, 20%);
+            &__profesion h2 {
+                color: darken(v.$blanco, 25%);
             }
 
-            &__localidad h4 {
+            &__localidad h3 {
                 color: darken(v.$blanco, 20%);
             }
         }
@@ -191,6 +191,35 @@ body {
 
         .menu{
             fill: v.$blanco;
+        }
+
+        .blog{
+            &__heading{
+                &-descripcion{
+                    p{
+                        color: darken(v.$blanco,20%);
+                    }
+                }
+            }
+        }
+        .publicacion{
+            &__fecha{
+               color:v.$blanco
+        
+            }
+            &__descripcion{
+               
+              
+                p{
+                   color: darken(v.$blanco,20%);
+                }
+               
+            }
+            &__volver{
+                a{
+                    color: v.$blanco;
+                }
+            }
         }
     }
 }
@@ -377,4 +406,28 @@ button:hover {
     100% {
         transform: rotate(0deg);
     }
+}
+
+.menu{
+    position: fixed;
+    height: 32px;
+    width: 32px;
+    top: 5%;
+    z-index: 100000000000;
+    right: 2%;
+    &:hover{
+        cursor: pointer;
+    }
+
+    @include m.desktop{
+        
+        height: 38px;
+        width: 38px;
+        }
+
+
+}
+
+a:hover{
+    cursor: pointer;
 }

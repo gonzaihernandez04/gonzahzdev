@@ -11,7 +11,12 @@
 .align-center{
     align-items: center;
 }
-
+.decoration-none{
+text-decoration: none;
+}
+.all-unset{
+    all: unset;
+}
 .grid{
     display: grid;
 }
@@ -33,6 +38,14 @@
 }
 .text-center{
     text-align: center;
+}
+.mx-auto{
+    margin:0 auto;
+}
+.opacity{
+    &-lighten{
+        opacity: 0.2;
+    }
 }
 $i: 0;
 @for $i from 0 to 20{

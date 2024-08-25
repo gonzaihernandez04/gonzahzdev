@@ -38,6 +38,7 @@ class ActiveRecord {
             // Creando un nuevo registro
             $resultado = $this->crear();
         }
+
         return $resultado;
     }
 

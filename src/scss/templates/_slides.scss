@@ -1,19 +1,46 @@
 
 @use 'base/variables' as v;
+@use 'base/mixins' as m;
 .slides-container{
         overflow: hidden;
+        &__title{
+            text-align: center;
+            @include m.tablet{
+                text-align: left;
+            }
+        }
     &__slide{
-       display: flex;
-       white-space: wrap;
         margin-block: 3rem;
+        display: grid;
+        place-items: center;
+        @include m.telefono{
+            grid-template-columns: repeat(2, 1fr);
+            place-items: center;
+        }
+        @include m.tablet{
+            grid-template-columns: repeat(3, 1fr);
+            place-items: center;
+            row-gap: 4rem;
+
+        }
+       @include m.desktop{
+        grid-template-columns: repeat(5, 1fr);
+        row-gap: 4rem;
+        place-items: left;
+       }
+      
         &-img{
             position: relative;
             padding: 1.5rem;
             height: 76px;
             width: 76px;
-            margin-right: 3rem;
+            margin: 0;
             background-color: v.$blanco;
             border-radius: 50%;
+            @include m.desktop{
+                margin-right: 3rem;
+            }
+       
         }
 
     }

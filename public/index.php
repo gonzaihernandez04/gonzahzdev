@@ -2,16 +2,18 @@
 
 require __DIR__ . '/../includes/app.php';
 
-use Controllers\ApiTecnologiasController;
-use Controllers\ApiUniversidadesController;
-use Controllers\DocenciaController;
 use MVC\Router;
+use Controllers\BlogController;
+use Controllers\AdminController;
 use Controllers\IndexController;
 use Controllers\TitulosController;
+use Controllers\DocenciaController;
 use Controllers\EstudiosController;
 use Controllers\ProyectosController;
 use Controllers\ExperienciaController;
 use Controllers\TecnologiasController;
+use Controllers\ApiTecnologiasController;
+use Controllers\ApiUniversidadesController;
 
 $router = new Router();
 
@@ -42,7 +44,27 @@ $router->post('/docencia/opiniones/crear',[DocenciaController::class,"crear"]);
 
 
 // BLOG
-//$router->get('/blog',[BlogController::class,"index"]);
+$router->get('/blog',[BlogController::class,"index"]);
+
+
+$router->get('/blog/publicacion',[BlogController::class,"verPublicacion"]);
+
+
+//Crear publicacion
+
+$router->get('/blog_manager/crear',[BlogController::class,"crear"]);
+$router->post('/blog_manager/crear',[BlogController::class,"crear"]);
+
+$router->get('/blog_manager/eliminar',[BlogController::class,"eliminar"]);
+
+
+
+
+//ADMIN
+
+$router->get('/admin/validar',[AdminController::class,"validar"]);
+$router->post('/admin/validar',[AdminController::class,"validar"]);
+
 
 
 // Contacto
