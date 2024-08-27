@@ -11,6 +11,7 @@ class BlogController{
 
     public static function index(Router $router){
         $publicaciones = Publicacion::all();
+
         $router->render("blog/index",[
             "titulo" => "Blog 📖",
             "isHeaderVisible"=>false,
@@ -31,8 +32,10 @@ class BlogController{
                 $fechaYHora = explode(" ",$date);
                 $_POST["fecha"] = $fechaYHora[0];
                 $_POST["hora"] = $fechaYHora[1];
+                //Permite admitir que ciertas etiquetas HTML(strip_tags) en caso de llenar un form
+                $contenidoEscapado = strip_tags($_POST["descripcion"],'<h2>,<h3>,<a>,<p>,<ul>,<blockquote>,<li>');
 
-                
+                $_POST["descripcion"] = $contenidoEscapado;
                 if(isset($_FILES["imagen"])){
                     $filePath = $_FILES["imagen"]["tmp_name"];
                     $manager = new ImageManager(Driver::class);
@@ -53,6 +56,7 @@ class BlogController{
 
                 $publicacion = new Publicacion($_POST);
                 $publicacion->guardar();
+
 
                 header("Location: /blog");
                 exit;

@@ -39,13 +39,14 @@
         }
         &-descripcion{
             margin: 2rem 0;
+            display: -webkit-box;       /* Flexbox antiguo, necesario para compatibilidad */
+            -webkit-box-orient: vertical;  /* Configura la orientación de las líneas */
+            overflow: hidden;           /* Oculta el texto que sobrepase el límite */
+            -webkit-line-clamp: 2;   
             p{
                 line-height: 2rem;
                 text-align: justify;
-                display: -webkit-box;       /* Flexbox antiguo, necesario para compatibilidad */
-    -webkit-box-orient: vertical;  /* Configura la orientación de las líneas */
-    overflow: hidden;           /* Oculta el texto que sobrepase el límite */
-    -webkit-line-clamp: 2;   
+              
     color: lighten(v.$negro,20%);
             }
         }
@@ -57,6 +58,11 @@
                 min-width: 200px;
                 width: 100%;
                 object-fit: cover;
+            }
+            &--chico{
+                img{
+                    border-radius: 20px;
+                }
             }
         }
     }

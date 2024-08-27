@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="/build/css/app.css">
  
 
-
-    
     <title>gonzahzdev | <?php echo $titulo ?? '';?> </title>
 </head>
 <body>

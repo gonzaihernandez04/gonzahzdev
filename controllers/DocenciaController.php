@@ -43,7 +43,9 @@ class DocenciaController
 
         $router->render("docencia/opiniones", [
             "titulo" => "Opiniones 👨🏻‍🏫",
-            "opiniones" => $opiniones
+            "opiniones" => $opiniones,
+            "isHeaderVisible"=>true
+
         ]);
     }
 
@@ -87,7 +89,9 @@ class DocenciaController
 
         $router->render("docencia/crear_opinion", [
             "titulo" => "Crear Opinion 👨🏻‍🎓👩🏻‍🎓",
-            "alertas" =>$alertas
+            "alertas" =>$alertas,
+            "isHeaderVisible"=>true
+
         ]);
     }
 }

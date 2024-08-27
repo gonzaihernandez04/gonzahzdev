@@ -3,7 +3,7 @@
         'name' => 'gonza/gonzahzdev',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => 'd5373b8b3b8bcee7e8bbd4cc2be47a24a180dd9c',
+        'reference' => 'f92b5b539e524d9d964be2c241169e4b0e36ed20',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'gonza/gonzahzdev' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => 'd5373b8b3b8bcee7e8bbd4cc2be47a24a180dd9c',
+            'reference' => 'f92b5b539e524d9d964be2c241169e4b0e36ed20',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

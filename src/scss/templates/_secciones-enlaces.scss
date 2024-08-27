@@ -2,7 +2,7 @@
 @use 'base/variables' as v;
 .secciones{
     padding: 3rem 0;
-    &__enlaces a{
+    &__enlaces a,span{
 
         @include m.enlace(v.$negro,1rem,0px,transparent,transparent);
         margin-right: 3rem;
